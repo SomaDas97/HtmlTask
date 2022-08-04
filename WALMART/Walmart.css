@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+   height:  100vh;
+   width: 100%;
+   background:white;
+
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: rgb(8, 121, 220);
+    border-bottom: 2px solid white;
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+    padding: 40px;
+}
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.searchBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 500px;
+    
+}
+.searchText{
+    width: 570px;
+    height: 40px;
+    border-radius: 10rem;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+    
+}
+.searchText :focus{
+    outline: none; 
+
+}
+::placeholder{
+    color: grey;
+    padding: 40px;
+    display: inline;
+    font-weight: bold;
+}
+
+.searchBtn{
+    width: 35px;
+    height: 35px;
+    background-color: yellow;
+    color: white;
+    position: absolute;
+    right: 1rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+/* .menu nav{
+        flex: 1;
+        padding-right: 60px;
+}
+.menu nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px
+} */
+.navbar2{
+    width: 100%;
+    height: 25px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: rgb(8, 121, 220);
+}
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+.side a {
+
+display: inline;
+color: rgb(242, 244, 245);
+padding-right: 30px;
+font-weight:bold;
+text-decoration: none;
+
+}
+.carousel-inner >.item > img,
+.carousel-inner > .item > a > img {
+
+    width: 60%;
+    margin: auto;
+
+  }
+
+

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        min-height: 140vh;
+    }
+
+    .main {
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-color: rgb(44, 138, 206);
+        position: sticky;
+        z-index: 2;
+    }
+
+    .navbar {
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+        position: relative;
+    }
+
+    .icon {
+        width: 1000px;
+        height: 00px;
+        float: left;
+    }
+
+    .logo {
+        width: 100px;
+        height: 40px;
+        /* padding-left: 0px;
+    padding-top: 3px;  */
+        /* float: left;  */
+        margin-left: -180px;
+
+    }
+    .Department {
+        position: relative;
+        display: inline-block;
+    }
+
+    .Dep_btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dep_dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dep_dropdown a{
+        color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+    }
+    .dep_dropdown a:hover {background-color: #f1f1f1}
+
+.Department:hover .Dep_btn {
+  display: block;
+}
+
+.Department:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
+
+    .more.cart {
+        position: relative;
+        left: 45px;
+    }
+
+    .more_lan,
+    .cart_lan {
+        color: white;
+
+    }
+
+
+    .menu {
+        width: 400px;
+        float: left;
+        height: 70px;
+    }
+
+    .menu ul {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu ul li {
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+
+    .search {
+        width: 430px;
+        float: left;
+        margin-left: 120px;
+    }
+
+    .srch {
+        font-family: 'Times New Roman';
+        width: 200%;
+        height: 100px;
+        background: transparent;
+        border-radius: 40%;
+        margin-top: 13px;
+        color:grey;
+        border-right: none;
+        font-size: 16px;
+        float: left;
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .btn {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 196, 0, 0.791);
+        border-radius: 500%;
+        margin-top: 13px;
+    }
+
+    img {
+        width: 100px;
+
+    }
+
+    .search {
+        width: 700px;
+        height: 40px;
+        max-width: 500px;
+        background: white;
+        display: flex;
+        border-radius: 50px;
+        align-items: center;
+        padding: 5px, 10px;
+    }
+
+    .search input {
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 24px 20px;
+        font-size: 20px;
+        color: #cac7ff;
+    }
+
+    ::placeholder {
+        color: grey;
+    }
+
+    .search button img {
+        width: 25px;
+    }
+
+    .search button img {
+        border: 0;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: rgb(247, 247, 4);
+    }
+
+    .menu2 {
+        width: 400px;
+        float: right;
+        height: 70px;
+    }
+
+    .menu2 ul {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu2 ul li {
+        list-style: none;
+        margin-left: 150px;
+        margin-top: -25px;
+        font-size: 14px;
+    }
+
+    .menu2 ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+
+    .cart {
+        width: 200px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <p class="logo"><img src="https://i.ibb.co/DPdfmtS/logo2.png" height="70px" width="100px"></p>
+                </div>
+
+                <div class="department">
+                    <button class="Dep_btn">Dropdown</button>
+                    <div class="dep_dropdown">
+                    <a href="#">All Department</a>
+                    <a href="#">Savings & Featured Shopes</a>
+                    <a href="#">Featured Brands</a>
+                    <a href="#">Grocery</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Clothing , Shoes & Accessories</a>
+                    <a href="#">Home, Furniture & Apppliance</a>
+                    <a href="#">Toys & video Games</a>
+                    <a href="#">Home Improvment</a>
+
+                    </div>
+                  </div>
+
+                <!-- <div class="department">
+                    <a href="#" class="Dep_btn">Departments</a>
+                    <div class="dep_dropdown ">
+                        <ul class="dep_dropdown_list">
+                            <li class="dep_dropdown_list">All Department</li>
+                            <li class="dep_dropdown_list">Savings & Featured Shopes</li>
+                            <li class="dep_dropdown_list">Featured Brands</li>
+                            <li class="dep_dropdown_list">Grocery</li>
+                            <li class="dep_dropdown_list">Electronics</li>
+                            <li class="dep_dropdown_list">Clothing , Shoes & Accessories</li>
+                            <li class="dep_dropdown_list">Home, Furniture & Apppliance</li>
+                            <li class="dep_dropdown_list">Toys & video Games</li>
+                            <li class="dep_dropdown_list">Home Improvment</li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="Services">
+                    <a href="#" class="ser_btn">Services</a>
+                    <div class="ser_dropdown none">
+                        <ul class="ser_dropdown_list">
+                            <li class="ser_dropdown_list">All Services</li>
+                            <li class="ser_dropdown_list">Auto care Center Services</li>
+                            <li class="ser_dropdown_list">Health services</li>
+                            <li class="ser_dropdown_list">Registry , List & Gifts</li>
+                            <li class="ser_dropdown_list">Custom cakes</li>
+                            <li class="ser_dropdown_list">Photo services</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <form action="" class="search">
+                        <input type="text" placeholder="Search everything at Walmart online and in store" name="q">
+                        <button type="submit"><img src="https://i.ibb.co/sR27mwm/image-6.png"></button>
+                    </form>
+                </div>
+
+                <div class="menu2">
+                    <ul>
+                        <li><a href="#">Reorder<br>My items</a></li>
+                        <li><a href="#"> Sign In<br>Account</a></li>
+                    </ul>
+                </div>
+
+                <div class="cart">
+                    <span class="cart_lan"><i class="fa fa-shopping-cart"></i></span>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
